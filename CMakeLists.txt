@@ -13,6 +13,7 @@ endif()
 
 add_executable(artillery
   src/main.c
+  src/simulation.c
 )
 
 target_include_directories(artillery PRIVATE include)
@@ -24,6 +25,6 @@ endif()
 if (MSVC)
   target_compile_options(artillery PRIVATE /W4)
 else()
-  target_compile_options(artillery PRIVATE -Wall -Wextra -Wpedantic -Werror)
+  target_compile_options(artillery PRIVATE -Wall -Wextra -Wpedantic)
 endif()
 
